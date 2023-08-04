@@ -20,7 +20,7 @@ class SnapBlade extends BladeOne
      * @param string $text   Message of the error.
      * @param bool   $critic If true then the compilation is ended, otherwise it continues.
      */
-	public function showError($id, $text, $critic = false)
+	public function showError($id, $text, $critic = false, $alwaysThrow = false)
     {
         \ob_get_clean();
         throw new TemplatingException($text);
@@ -63,7 +63,7 @@ class SnapBlade extends BladeOne
      *
      * @throws \Exception
      */
-    public function run($view, $data = array())
+    public function run($view = null, $data = array())
     {
         return parent::run(
             $view,

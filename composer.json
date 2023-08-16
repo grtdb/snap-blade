@@ -19,8 +19,8 @@
         }
     },
     "require": {
-        "php": ">=7.1",
-        "snapwp/snap-core": "*",
+        "php": "^8.0",
+        "snapwp/snap-core": "0.8.18.1",
         "eftec/bladeone": "~3.20"
     },
     "require-dev": {
